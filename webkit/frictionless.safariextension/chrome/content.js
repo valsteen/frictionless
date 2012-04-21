@@ -225,7 +225,7 @@ function anonymize_link(url) {
         if (dirty_vars[x] in url_params)
         delete url_params[dirty_vars[x]];
     }
-    return url.substr(0, url.indexOf('?')) + encode_qs(url_params);
+    return url.substr(0, url.indexOf('?')+1) + encode_qs(url_params);
 };
 
 function reverse_string(str) {
